@@ -1,39 +1,38 @@
 import React from 'react'
-import Image from 'react-bootstrap/Image'
-import g1 from '../images/gallery/g1.jpg'
-import g2 from '../images/gallery/g2.jpg'
-import g3 from '../images/gallery/g3.jpg'
-import g4 from '../images/gallery/g4.jpg'
-import g5 from '../images/gallery/g5.jpg'
-import g6 from '../images/gallery/g6.jpg'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import {Row, Col} from 'react-bootstrap'
 
-const Gallery = () => (
-    <section className="galerie" id="galerie">
-        <h2>Galerie</h2>
+const Gallery = () => {
+    const data = useStaticQuery(graphql`
+        query Images {
+            images: allFile(filter: {relativeDirectory: {eq: "images/gallery"}}) {
+                nodes {
+                  id
+                  childImageSharp {
+                       fixed(width: 400) {
+                         ...GatsbyImageSharpFixed
+                       }
+                  }
+                }
+              }
+        }
+    `)
 
-        <div className="row gallery">
-            <div className="col-sm-6 col-lg-4">
-                <Image src={g1} alt="" />
-            </div>
-            <div className="col-sm-6 col-lg-4">
-                <Image src={g2} alt="" />
-            </div>
-            <div className="col-sm-6 col-lg-4">
-                <Image src={g3} alt="" />
-            </div>
-            <div className="col-sm-6 col-lg-4">
-                <Image src={g4} alt="" />
-            </div>
-            <div className="col-sm-6 col-lg-4">
-                <Image src={g5} alt="" />
-            </div>
-            <div className="col-sm-6 col-lg-4">
-                <Image src={g6} alt="" />
-            </div>
-        </div>
+    console.log(data)
 
-
-    </section>
-)
+    return (
+        <section className="galerie" id="galerie">
+            <h2>Galerie</h2>
+            <Row className="gallery">
+                {data.images.nodes.map(image => (
+                    <Col>
+                        <Img key={image.id}  fixed={image.childImageSharp.fixed} />
+                    </Col>
+                ))}
+            </Row>
+        </section>
+    )
+}
 
 export default Gallery

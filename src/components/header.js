@@ -43,8 +43,8 @@ const Header = () => (
       <div className="contact">
         
         <h3>Kontaktní informace</h3>
-        <a href="tel:+420 415 783 180"><i class="fa fa-phone" aria-hidden="true"></i> +420 415 783 180</a>
-        <a href="mailto:murban@mediclub.cz"><i class="fa fa-envelope" aria-hidden="true"></i> murban@mediclub.cz</a>
+        <a href="tel:+420 415 783 180"><i className="fa fa-phone" aria-hidden="true"></i> +420 415 783 180</a>
+        <a href="mailto:murban@mediclub.cz"><i className="fa fa-envelope" aria-hidden="true"></i> murban@mediclub.cz</a>
       </div>
     </div>
   </header>
