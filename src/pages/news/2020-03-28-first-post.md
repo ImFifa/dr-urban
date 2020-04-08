@@ -3,7 +3,7 @@ title: "First Post"
 date: "2020-03-28"
 ---
 
-Pandas are really sweet.
+Tak první verze webu je tu!
 
 Here's a video of a panda eating sweets.
 
