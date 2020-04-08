@@ -1,0 +1,48 @@
+@import "~bootstrap/scss/bootstrap";
+@import 'variables';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+// navbar
+nav {
+    background-color: $color2;
+    color: $color3;
+
+    .navbar-light .navbar-brand {
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+        color: $color3;
+    }
+    .fixed-top {
+        height: 80px;
+    }
+}
+
+section {
+    padding: 2rem;
+    border: 1px solid $color1;
+    min-height: 500px;
+}
+
+h2 {
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+
+footer {
+    background-color: $color2;
+    text-align: center;
+    padding: 3rem
+}
+
+footer svg {
+    max-width: 250px;
+    margin: 3rem 0;
+}
