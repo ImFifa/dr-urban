@@ -1,8 +1,13 @@
 ---
-title: "This is last post"
+title: Nejnovější příspěvek - Žatec
 date: "2020-04-01"
+<<<<<<< HEAD
 thumbnail: ""
+=======
+thumbnail: /img/žatec.jpg
+>>>>>>> f711b0fc115d9e5f0ede08e286dd443afd07ffbe
 ---
+**Město Žatec z výšky!**
 
 Anim adipisicing cillum commodo fugiat id ad cupidatat labore id adipisicing cupidatat. Enim mollit nostrud irure qui ullamco adipisicing. Nulla Lorem velit proident eu est culpa. Cillum nulla nisi nostrud cupidatat deserunt pariatur eu laboris enim in. Fugiat Lorem id magna culpa exercitation deserunt. Nostrud pariatur non et id minim dolor aliquip. Laboris Lorem in laborum sint sit anim.
 
