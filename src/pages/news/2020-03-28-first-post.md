@@ -1,7 +1,7 @@
 ---
 title: "First Post"
 date: "2020-03-28"
-thumbnail: ""
+thumbnail:
 ---
 
 Tak první verze webu je tu!

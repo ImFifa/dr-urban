@@ -1,11 +1,7 @@
 ---
 title: Nejnovější příspěvek - Žatec
 date: "2020-04-01"
-<<<<<<< HEAD
-thumbnail: ""
-=======
-thumbnail: /img/žatec.jpg
->>>>>>> f711b0fc115d9e5f0ede08e286dd443afd07ffbe
+thumbnail:
 ---
 **Město Žatec z výšky!**
 
