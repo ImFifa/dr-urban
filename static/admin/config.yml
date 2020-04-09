@@ -1,20 +1,42 @@
 backend:
   name: git-gateway
   branch: master
-
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "aktuality"
+    label: "Aktuality"
+    folder: "static/content/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
-     preview: false
+     preview: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Nadpis", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - {label: "Fotografie", name: "thumbnail", widget: "image"}
+      - { label: "Obsah aktuality", name: "body", widget: "markdown" }
+
+  - label: "Sekce"
+    name: "sections"
+    files:
+      - label: "Kontakt"
+        name: "contact"
+        file: "static/content/contact.yml"
+        fields:
+          - {label: Nadpis, name: title, widget: string}
+          - {label: Telefon, name: phone, widget: string}
+          - {label: Email, name: email, widget: string}
+      - label: "Ordinační hodiny"
+        name: "opening-hours"
+        file: "static/content/opening-hours.yml"
+        fields:
+          - {label: Nadpis, name: title, widget: string}
+          - label: Dny
+            name: days
+            widget: list
+            fields:
+              - {label: Den, name: day, widget: string}
+              - {label: Dopoledne, name: morning, widget: string}
+              - {label: Odpoledne, name: afternoon, widget: string}
