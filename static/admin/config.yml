@@ -40,3 +40,11 @@ collections:
               - {label: Den, name: day, widget: string}
               - {label: Dopoledne, name: morning, widget: string}
               - {label: Odpoledne, name: afternoon, widget: string}
+      - label: "Ordinace"
+        name: "ordination"
+        file: "static/content/ordination.yml"
+        fields:
+          - {label: Nadpis, name: title, widget: string}
+          - {label: "Fotografie", name: "thumbnail", widget: "image"}
+          - {label: "Obsah sekce", name: "body", widget: "markdown" }
+
