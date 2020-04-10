@@ -1,7 +1,9 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
 const Pricing = () => (
     <section className="cenik" id="cenik">
+        <Container>
         <h2>Ceník</h2>
         <p>Úkony, které dle Zdravotního řádu, nejsou v souvislosti se zdravotním stavem pacienta a zdravotní pojišťovna je neproplácí. Cena je kalkulovaná dle <a target="_blank"  href="https://www.vzp.cz/poskytovatele/ciselniky/zdravotni-vykony" rel="noopener noreferrer">Sazebníku výkonu VZP</a> a ceny bodu dle MF pro daný rok.</p>
         
@@ -25,7 +27,7 @@ const Pricing = () => (
             <li>Předoperační vyšetření nehrazené z veřejného zdravotního pojištění: 500 Kč + výdaje na laboratorní vyšetření</li>
             <li>Očkování nehrazené z veřejného zdravotního pojištění: 100 Kč</li>
         </ul>
-
+        </Container>
     </section>
 )
 

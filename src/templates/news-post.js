@@ -1,11 +1,13 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import Header from "../components/header"
 
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
+    <Header/>
       <article>
         <h2>{post.frontmatter.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

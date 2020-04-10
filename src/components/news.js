@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from "gatsby"
-import { Col, Row } from 'react-bootstrap'
+import { Col, Row, Container } from 'react-bootstrap'
 
 const News = () => {
   const data = useStaticQuery(graphql`
@@ -25,11 +25,12 @@ const News = () => {
 
   return (
     <section class="aktuality" id="aktuality">
+        <Container>
+          
         <h2>Aktuality</h2>
-
         <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Col className="aktualita" key={node.id} lg={4}>
+          <Col className="aktualita" key={node.id} xl={4}>
             <h4>
               {node.frontmatter.title}{" "}
               <small>
@@ -41,6 +42,8 @@ const News = () => {
           </Col>
         ))}
         </Row>
+        
+        </Container>
     </section>
   )
 }

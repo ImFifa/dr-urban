@@ -7,11 +7,10 @@ import '../scripts/navigation'
 
 const Navigation = () => (
         <Navbar id="navbar" fixed="top" bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand href="#uvod"><Image src={icon} className="icon" alt="MUDr. Miroslav Urban"/>MUDr. Miroslav Urban</Navbar.Brand>
+        <Navbar.Brand href="/#uvod"><Image src={icon} className="icon" alt="MUDr. Miroslav Urban"/>MUDr. Miroslav Urban</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" id="navbar-toggler"/>
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-                <Nav.Link href="/#uvod">Úvod</Nav.Link>
                 <Nav.Link href="/#aktuality">Aktuality</Nav.Link>
                 <Nav.Link href="/#ordinace">Ordinace</Nav.Link>
                 <Nav.Link href="/#cenik">Ceník</Nav.Link>
