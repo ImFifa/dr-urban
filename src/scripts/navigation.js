@@ -1,4 +1,5 @@
 // hide navbar on scroll
+/*
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
@@ -9,7 +10,7 @@ var currentScrollPos = window.pageYOffset;
   }
   prevScrollpos = currentScrollPos;
 }
-
+*/
 // collapse on link click
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("nav-link")) {
