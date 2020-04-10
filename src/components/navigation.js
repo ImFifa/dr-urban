@@ -11,13 +11,13 @@ const Navigation = () => (
         <Navbar.Toggle aria-controls="basic-navbar-nav" id="navbar-toggler"/>
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-                <Nav.Link href="#uvod">Úvod</Nav.Link>
-                <Nav.Link href="#aktuality">Aktuality</Nav.Link>
-                <Nav.Link href="#ordinace">Ordinace</Nav.Link>
-                <Nav.Link href="#cenik">Ceník</Nav.Link>
-                <Nav.Link href="#pojistovny">Pojišťovny</Nav.Link>
-                <Nav.Link href="#galerie">Galerie</Nav.Link>
-                <Nav.Link href="#kontakt">Kontakt</Nav.Link>
+                <Nav.Link href="/#uvod">Úvod</Nav.Link>
+                <Nav.Link href="/#aktuality">Aktuality</Nav.Link>
+                <Nav.Link href="/#ordinace">Ordinace</Nav.Link>
+                <Nav.Link href="/#cenik">Ceník</Nav.Link>
+                <Nav.Link href="/#pojistovny">Pojišťovny</Nav.Link>
+                <Nav.Link href="/#galerie">Galerie</Nav.Link>
+                <Nav.Link href="/#kontakt">Kontakt</Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Navbar>

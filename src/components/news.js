@@ -1,12 +1,11 @@
 import React from 'react'
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import { Col, Row } from 'react-bootstrap'
 
 const News = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(limit: 3, sort: {order: DESC, fields: frontmatter___date}) {
-        totalCount
         edges {
           node {
             id
@@ -15,6 +14,9 @@ const News = () => {
               date(formatString: "DD MMMM, YYYY")
             }
             excerpt
+            fields {
+              slug
+            }
           }
         }
       }
@@ -35,6 +37,7 @@ const News = () => {
               </small>
             </h4>
             <p>{node.excerpt}</p>
+            <Link className="link" to={node.fields.slug} >Číst více <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
           </Col>
         ))}
         </Row>

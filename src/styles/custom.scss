@@ -50,6 +50,22 @@ h5 {
     margin: 0 0 2rem 0;
 }
 
+.link {
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $blue;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 1rem 0 auto;
+
+    i {
+        margin: 0 .5rem;
+        font-size: 1.2rem;
+    }
+}
+
 p, li {
     line-height: 140% !important;
 }
@@ -124,12 +140,18 @@ nav {
 
 // header
 header {
-    margin-top: 60px;
+    padding: 60px 0 0 0;
     width: 100vw;
     height: auto;
     position: relative;
     background-color: $white;
     z-index: -2;
+
+    svg {
+        max-width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
 
     .heading {
         padding: 3.5rem 1.5rem;
@@ -203,17 +225,27 @@ header::after {
     background-color: $white;
 
     .aktualita {
+        padding: 1.5rem 1rem;
+        background-color: $lightblue-bg;
+        margin-bottom: 2rem;
+
         h4 {
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 0;
             margin: 0;
         }
-        p {
-            padding: 0 1rem;
-        }
 
-        background-color: $whitish;
-        padding: 1.5rem 0rem;
-        margin-bottom: 2rem;
+        p {
+            padding: 0;
+        }
+    }
+}
+
+article {
+    max-width: 700px;
+    padding: 5rem 1.5rem 2rem 1.5rem;
+
+    h2 {
+        margin-top: 2rem;
     }
 }
 
