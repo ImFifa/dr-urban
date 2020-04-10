@@ -10,8 +10,8 @@ const Gallery = () => {
                 nodes {
                   id
                   childImageSharp {
-                       fixed(width: 400) {
-                         ...GatsbyImageSharpFixed
+                       fluid(maxWidth: 600) {
+                         ...GatsbyImageSharpFluid
                        }
                   }
                 }
@@ -26,8 +26,8 @@ const Gallery = () => {
             <h2>Galerie</h2>
             <Row className="gallery">
                 {data.images.nodes.map(image => (
-                    <Col>
-                        <Img key={image.id}  fixed={image.childImageSharp.fixed} />
+                    <Col md={6} className="mb-3">
+                        <Img key={image.id}  fluid={image.childImageSharp.fluid} />
                     </Col>
                 ))}
             </Row>
