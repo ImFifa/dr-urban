@@ -26,7 +26,7 @@ const Gallery = () => {
             <Row className="gallery">
                 {data.images.nodes.map(image => (
                     <Col md={6} xl={4}>
-                        <Img key={image.id}  fluid={image.childImageSharp.fluid} />
+                        <Img key={image.id} fluid={image.childImageSharp.fluid} />
                     </Col>
                 ))}
             </Row>

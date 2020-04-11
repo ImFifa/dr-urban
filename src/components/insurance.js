@@ -1,11 +1,11 @@
 import React from 'react'
 import {Col, Row, Image, Container} from 'react-bootstrap'
-import vzp from '../images/vzp.png'
-import vozp from '../images/vozp.png'
-import cpzp from '../images/cpzp.png'
-import ozp from '../images/ozp.png'
-import zpmvcr from '../images/zpmvcr.png'
-import rbp213 from '../images/rbp213.jpg'
+import vzp from '../images/insurance/vzp.png'
+import vozp from '../images/insurance/vozp.png'
+import cpzp from '../images/insurance/cpzp.png'
+import ozp from '../images/insurance/ozp.png'
+import zpmvcr from '../images/insurance/zpmvcr.png'
+import rbp213 from '../images/insurance/rbp213.jpg'
 
 const Insurance = () => (
     <section className="pojistovny" id="pojistovny">

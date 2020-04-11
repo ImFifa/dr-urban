@@ -10,12 +10,9 @@ collections:
     folder: "static/content/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-     preview: true
     fields:
       - { label: "Nadpis", name: "title", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime" }
-      - {label: "Fotografie", name: "thumbnail", widget: "image"}
       - { label: "Obsah aktuality", name: "body", widget: "markdown" }
 
   - label: "Sekce"
@@ -28,6 +25,7 @@ collections:
           - {label: Nadpis, name: title, widget: string}
           - {label: Telefon, name: phone, widget: string}
           - {label: Email, name: email, widget: string}
+          - {label: Adresa, name: address, widget: string}
       - label: "Ordinační hodiny"
         name: "opening-hours"
         file: "static/content/opening-hours.yml"
@@ -45,6 +43,22 @@ collections:
         file: "static/content/ordination.yml"
         fields:
           - {label: Nadpis, name: title, widget: string}
-          - {label: "Fotografie", name: "thumbnail", widget: "image"}
-          - {label: "Obsah sekce", name: "body", widget: "markdown" }
+          - {label: Popis, name: description, widget: markdown}
+          - label: Služby
+            name: services
+            widget: list
+            fields:
+              - {label: Služba, name: service, widget: string}
 
+      - label: Ceník
+        name: pricing
+        file: "site/content/pricing.yml"
+        fields:
+          - {label: Nadpis, name: title, widget: string}
+          - {label: Popis, name: description, widget: markdown}
+          - label: Položky
+            name: items
+            widget: list
+            fields:
+              - {label: Název položky, name: name, widget: string}
+              - {label: Cena, name: price, widget: string}
