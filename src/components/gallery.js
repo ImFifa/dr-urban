@@ -19,15 +19,13 @@ const Gallery = () => {
         }
     `)
 
-    console.log(data)
-
     return (
         <section className="galerie" id="galerie">
             <Container>
             <h2>Galerie</h2>
             <Row className="gallery">
                 {data.images.nodes.map(image => (
-                    <Col md={6} xl={4} className="mb-3">
+                    <Col md={6} xl={4}>
                         <Img key={image.id}  fluid={image.childImageSharp.fluid} />
                     </Col>
                 ))}
