@@ -8,10 +8,11 @@ import { useStaticQuery, graphql } from 'gatsby'
 const Navigation = () => {
     const data = useStaticQuery(graphql`
         query image {
-            image: imageSharp(id: {eq: "ac408ac1-8e8c-5fa4-bf09-178b72902a5a"}) {
-                id
-                fixed(height: 35, width: 35) {
+            image: allImageSharp(filter: {id: {eq: "ac408ac1-8e8c-5fa4-bf09-178b72902a5a"}}) {
+                nodes {
+                  fixed {
                     ...GatsbyImageSharpFixed
+                  }
                 }
             }
         }
@@ -19,7 +20,7 @@ const Navigation = () => {
 
     return (
         <Navbar id="navbar" fixed="top" bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand href="/#"><Img fixed={data.image.fixed} className="icon" alt="MUDr. Miroslav Urban"/>MUDr. Miroslav Urban</Navbar.Brand>
+        <Navbar.Brand href="/#"><Img fixed={data.image.nodes.fixed} className="icon" alt="MUDr. Miroslav Urban"/>MUDr. Miroslav Urban</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" id="navbar-toggler"/>
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
