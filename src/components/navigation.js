@@ -1,26 +1,13 @@
 import React from "react"
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import Image from 'react-bootstrap/Image'
+import icon from '../images/icon.png'
 import '../scripts/navigation'
-import Img from 'gatsby-image'
-import { useStaticQuery, graphql } from 'gatsby'
 
-const Navigation = () => {
-    const data = useStaticQuery(graphql`
-        query image {
-            image: allImageSharp(filter: {id: {eq: "ac408ac1-8e8c-5fa4-bf09-178b72902a5a"}}) {
-                nodes {
-                  fixed {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-            }
-        }
-    `)
-
-    return (
+const Navigation = () => (
         <Navbar id="navbar" fixed="top" bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand href="/#"><Img fixed={data.image.nodes.fixed} className="icon" alt="MUDr. Miroslav Urban"/>MUDr. Miroslav Urban</Navbar.Brand>
+        <Navbar.Brand href="/#"><Image src={icon} className="icon" alt="MUDr. Miroslav Urban"/>MUDr. Miroslav Urban</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" id="navbar-toggler"/>
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
@@ -34,6 +21,5 @@ const Navigation = () => {
         </Navbar.Collapse>
         </Navbar>
     )
-}
 
 export default Navigation
