@@ -29,7 +29,7 @@ h1, h2, h3, h4 {
 h1 {
     font-size: 2rem;
     margin: 0;
-    padding: 0 0 .5rem 0;
+    padding: 0 0 1rem 0;
 }
 
 h2 {
@@ -181,6 +181,7 @@ header {
 
         td {
             border: none;
+            padding: .5rem;
             border-right: 1px solid $lightblue;
         }
         td:not(:first-child) {
