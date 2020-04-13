@@ -16,7 +16,6 @@ const Navigation = () => (
                 <Nav.Link href="/#cenik">Ceník</Nav.Link>
                 <Nav.Link href="/#pojistovny">Pojišťovny</Nav.Link>
                 <Nav.Link href="/#galerie">Galerie</Nav.Link>
-                <Nav.Link href="/#kontakt">Kontakt</Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Navbar>
