@@ -21,7 +21,7 @@ collections:
     files:
       - label: "Kontakt"
         name: "contact"
-        file: "static/content/contact.yml"
+        file: "static/content/contact.md"
         fields:
           - {label: Nadpis, name: title, widget: string}
           - {label: Telefon, name: phone, widget: string}
@@ -29,7 +29,7 @@ collections:
           - {label: Adresa, name: address, widget: string}
       - label: "Ordinační hodiny"
         name: "opening-hours"
-        file: "static/content/opening-hours.yml"
+        file: "static/content/opening-hours.md"
         fields:
           - {label: Nadpis, name: title, widget: string}
           - label: Dny
@@ -41,7 +41,7 @@ collections:
               - {label: Odpoledne, name: afternoon, widget: string}
       - label: "Ordinace"
         name: "ordination"
-        file: "static/content/ordination.yml"
+        file: "static/content/ordination.md"
         fields:
           - {label: Nadpis, name: title, widget: string}
           - {label: Popis, name: description, widget: markdown}
@@ -53,7 +53,7 @@ collections:
 
       - label: Ceník
         name: pricing
-        file: "site/content/pricing.yml"
+        file: "site/content/pricing.md"
         fields:
           - {label: Nadpis, name: title, widget: string}
           - {label: Popis, name: description, widget: markdown}
