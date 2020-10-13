@@ -8,4 +8,6 @@ description: Úkony, které dle Zdravotního řádu, nejsou v souvislosti se
 items:
   - name: "Lékařské vyšetření pro získání řidičského průkazu osoby výdělečně činné:"
     price: 500 Kč
+  - name: "Lékařské vyšetření pro získání řidičského průkazu ostatních osob:"
+    price: 300 Kč
 ---
