@@ -4,26 +4,26 @@ import Table from 'react-bootstrap/Table'
 
 const Header = () => {
   const data = useStaticQuery(graphql`
-    query {
-        contact: markdownRemark(fields: {slug: {eq: "/content/contact/"}}) {
-          frontmatter {
-            title
-            phone
-            email
-            address
-          }
-        }
-        hours: markdownRemark(fields: {slug: {eq: "/content/opening-hours/"}}) {
-          frontmatter {
-            title
-            days {
-              day
-              morning
-              afternoon
-            }
-          }
+  {
+    contact: markdownRemark(fields: {slug: {eq: "/content/contact/"}}) {
+      frontmatter {
+        title
+        phone
+        email
+        address
+      }
+    }
+    hours: markdownRemark(fields: {slug: {eq: "/content/opening-hours/"}}) {
+      frontmatter {
+        title
+        days {
+          day
+          morning
+          afternoon
         }
       }
+    }
+  }
   `)
 
   return (
@@ -51,7 +51,6 @@ const Header = () => {
         </Table>
       </div>
       <div className="contact">
-        
         <h3>{data.contact.frontmatter.title}</h3>
         <a href="tel:{data.contact.frontmatter.phone}"><i className="fa fa-phone" aria-hidden="true"></i> {data.contact.frontmatter.phone}</a>
         <a href="mailto:{data.contact.frontmatter.email}"><i className="fa fa-envelope" aria-hidden="true"></i> {data.contact.frontmatter.email}</a>
