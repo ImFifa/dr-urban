@@ -7,7 +7,7 @@ description: Úkony, které dle Zdravotního řádu, nejsou v souvislosti se
   dle MF pro daný rok.
 items:
   - name: "Lékařské vyšetření pro získání řidičského průkazu osoby výdělečně činné:"
-    price: 5000 Kč
+    price: 500 Kč
   - name: "Lékařské vyšetření pro získání řidičského průkazu ostatních osob:"
     price: 300 Kč
   - name: "Vystavení “Posudku o zdravotní způsobilosti řidiče” pro skupiny C, D, E:"
