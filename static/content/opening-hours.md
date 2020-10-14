@@ -4,7 +4,7 @@ days:
   - day: Pondělí
     morning: 7.00 - 12.00
     afternoon: 13.00 - 15.00
-  - morning: 7.00 - 13.00
+  - morning: 7.00 - 12.00
     day: Úterý
     afternoon: "-"
   - morning: 7.00 - 12.00
