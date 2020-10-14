@@ -50,9 +50,8 @@ collections:
             widget: list
             fields:
               - {label: Služba, name: service, widget: string}
-
-      - label: Ceník
-        name: pricing
+      - label: "Ceník"
+        name: "pricing"
         file: "static/content/pricing.md"
         fields:
           - {label: Nadpis, name: title, widget: string}
