@@ -345,6 +345,14 @@ section {
     padding: 2rem;
 }
 
+.page404 {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 // footer
 footer {
     background-color: $darkblue;
@@ -445,6 +453,11 @@ footer svg {
         .aktualita {
             max-width: 32.33333%;
             margin: 0 .5% 2rem .5%;
+
+            small {
+                margin-top: .4rem;
+                display: block;
+            }
         }
     }
 }

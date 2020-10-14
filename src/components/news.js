@@ -5,7 +5,7 @@ import { Col, Row, Container } from 'react-bootstrap'
 const News = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(limit: 3, sort: {order: DESC, fields: frontmatter___date}) {
+      allMarkdownRemark(limit: 3, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(news)/"  }}) {
         edges {
           node {
             id
@@ -24,7 +24,7 @@ const News = () => {
   `)
 
   return (
-    <section class="aktuality" id="aktuality">
+    <section className="aktuality" id="aktuality">
         <Container>
           
         <h2>Aktuality</h2>

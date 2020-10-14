@@ -1,27 +1,21 @@
 import React from 'react'
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { Col, Row, Container } from 'react-bootstrap'
 
 
 const Ordination = () => {
     const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(limit: 3, sort: {order: DESC, fields: frontmatter___date}) {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              date(formatString: "DD MMMM, YYYY")
+        markdownRemark(fields: {slug: {eq: "/content/ordination/"}}) {
+          frontmatter {
+            services {
+              service
             }
-            excerpt
-            fields {
-              slug
-            }
+            title
+            description
           }
         }
       }
-    }
   `)
 
     return (
@@ -319,23 +313,13 @@ const Ordination = () => {
                         </svg>
                     </Col>
                     <Col>
-                        <h2>Ordinace</h2>
-                        <p>Ordinace praktického lékaře poskytuje tyto služby:</p>
+                        <h2>{data.markdownRemark.frontmatter.title}</h2>
+                        <p>{data.markdownRemark.frontmatter.description}</p>
 
                         <ul>
-                            <li>Léčba akutních a chronických onemocnění</li>
-                            <li>Pravidelné preventivní prohlídky pro všechny věkové kategorie</li>
-                            <li>Pravidelné očkování, očkování do zahraničí</li>
-                            <li>Pracovně-lékařskou péči (smluvní zajištění podle Zákona č.373/2011Sb.)</li>
-                            <li>Návštěvní službu v domácnosti</li>
-                            <li>Telefonické a e-mailové konzultace, možnost objednání</li>
-                            <li>Odběry krve a moči přímo v ordinaci, aplikace infuzní terapie</li>
-                            <li>EKG vyšetření (elektrokardiogram)</li>
-                            <li>Spirometrické vyšetření, měření saturace O2</li>
-                            <li>POCT vyšetření v ordinaci CRP, INR, HBA1c, glykemie, FOB diagnostika</li>
-                            <li>Dispenzarizace pacientů s diabetem 2. typu</li>
-                            <li>24 hodinové monitorování krevního tlaku</li>
-                            <li>Vyšetření cév dolních končetin přístrojem k diagnostice neprůchodnosti tepen</li>
+                            {data.markdownRemark.frontmatter.services.map(({ service }) => (
+                            <li>{service}</li>
+                            ))}
                         </ul>
                     </Col>
                 </Row>
