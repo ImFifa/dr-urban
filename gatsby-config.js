@@ -55,5 +55,14 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-EXFN79VC2H", // Google Analytics / GA
+        ],
+      },
+    },
   ],
 }
